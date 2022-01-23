@@ -161,7 +161,7 @@ void GetShift4Data(string accountNumber, string userName, string password, Dicti
             else
             {
                 Console.WriteLine("Error MasterCard does not match");
-                break;
+                driver.Quit();
             }
         }
         if (item.Text.Contains("VS"))
@@ -176,7 +176,7 @@ void GetShift4Data(string accountNumber, string userName, string password, Dicti
             else
             {
                 Console.WriteLine("Error Visa does not match");
-                break;
+                driver.Quit();
             }
         }
         if (item.Text.Contains("NS"))
@@ -191,7 +191,7 @@ void GetShift4Data(string accountNumber, string userName, string password, Dicti
             else
             {
                 Console.WriteLine("Error Discover does not match");
-                break;
+                driver.Quit();
             }
         }
         if (item.Text.Contains("AX"))
@@ -206,7 +206,7 @@ void GetShift4Data(string accountNumber, string userName, string password, Dicti
             else
             {
                 Console.WriteLine("Error American Express does not match");
-                break;
+                driver.Quit();
             }
         }
     }
